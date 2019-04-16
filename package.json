@@ -1,0 +1,19 @@
+{
+  "name": "word-finder-",
+  "version": "1.0.0",
+  "description": "An app that finds the full word you are looking for.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lotus-1/Word-Finder-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lotus-1/Word-Finder-/issues"
+  },
+  "homepage": "https://github.com/lotus-1/Word-Finder-#readme"
+}
