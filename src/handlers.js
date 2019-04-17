@@ -1,5 +1,6 @@
 var fs = require('fs');
 var path = require('path');
+var words = fs.readFile(path.join(__dirname, '..', 'public', 'words.txt'), 'utf8').split(/\n/);
 
 var handleHome = function(request, response) {
   var filePath = path.join(__dirname, '..', 'public', 'index.html');
@@ -35,7 +36,34 @@ var handlePublic = function(request, response, url) {
   });
 };
 
+// var arrWords = [];
+// // var box = document.getElementById('input');
+// var autoComplete = function(str) {
+//   var fileName = path.join(__dirname + "/.." + "/words.txt");
+//   fs.readFile(filename, 'utf8', function (err, data) {
+//     if (err) {
+//       console.log(error);
+//     } else {
+//       arrWords.words = data.split('\n');
+//       console.log(arrWords);
+//     }
+//   });
+// var newArrWords = arrWords.filter((el) => {
+//   if(arrWords[el].startsWith(box.value)) {
+//     return arrWords.join("\n");
+//   }
+// })
+// return newArrWords;
+// }
+var handlerSearch = function(request, response, url) {
+  console.log(words);
+var result =  words.filter(function(el){
+  return  el[0] == "a";
+});
+console.log(result);
+}
 module.exports = {
   handleHome,
+  handlePublic,
   handlePublic
 }

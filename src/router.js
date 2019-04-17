@@ -4,31 +4,27 @@ var pureFunction = function (x) {
     return x;
   }
 }
-var handler = require('./handlers');
 // This is our function
 
 var fs = require('fs');
-var arrWords = [];
+const path = require('path');
+const handlers = require('./handlers');
+const router = (request, response) => {
+  const url = request.url;
+  if(url === '/') {
+    handlers.handleHome(request, response);
 
-var autoComplete = function(str) {
-  var fileName = path.join(__dirname + "/.." + "/words.txt");
-  // var fileName = require('./word-list');
-  fs.readFile(filename, 'utf8', function (err, data) {
-    if (err) {
-      console.log(error);
-    } else {
-      arrWords.words = data.split('\n');
-      console.log(arrWords);
-    }
-  });
+  } else if (url.indexOf('/public/') !== -1) {
+      handlers.handlePublic(request, response, url);
 
-var newArrWords = arrWords.filter((el) => {
-  if(arrWords[el].startsWith('Pe')) {
-    return arrWords.join("\n");
+  }  else if (url === '/search'){
+      handlers.autoComplete(str);
   }
-})
-return newArrWords;
-}
+  else {
+    response.writeHead(404, { 'Content-Type': 'text/html' });
+    response.end('<h1>404 not found</h1>');
+  }
+};
 
 
 module.exports = pureFunction;
