@@ -1,0 +1,38 @@
+body {
+  text-align: center;
+  background-image: url('https://www.desktop-background.com/download/360x640/2012/12/13/498377_disney-wallpapers-backgrounds-with-quality-hd_2560x1440_h.jpg');
+  background-repeat: no-repeat;
+  background-attachment: : fixed;
+  background-size: cover;
+  margin: 0%;
+  background-position: 50% 50%:
+}
+
+.img {
+  border-radius: 10%;
+}
+
+.h1 {
+  font-size: 50px;
+  color: #003366;
+}
+
+.box {
+  border-radius: 20%;
+  border-color: #000033;
+  border-width: 5px;
+  width: 700px;
+  height: 50px;
+  font-size: 30px;
+
+}
+
+.button {
+  border-radius: 20%;
+  border-color: #000033;
+  border-width: 5px;
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+
+}

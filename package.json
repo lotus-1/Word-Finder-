@@ -2,9 +2,9 @@
   "name": "word-finder-",
   "version": "1.0.0",
   "description": "An app that finds the full word you are looking for.",
-  "main": "index.js",
+  "main": "public/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape src/test.js | tap-spec"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/lotus-1/Word-Finder-/issues"
   },
-  "homepage": "https://github.com/lotus-1/Word-Finder-#readme"
+  "homepage": "https://github.com/lotus-1/Word-Finder-#readme",
+  "devDependencies": {
+    "tap-spec": "^5.0.0",
+    "tape": "^4.10.1"
+  }
 }
