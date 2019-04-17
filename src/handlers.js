@@ -1,6 +1,14 @@
 var fs = require('fs');
 var path = require('path');
-var words = fs.readFile(path.join(__dirname, '..', 'public', 'words.txt'), 'utf8').split(/\n/);
+var filePath = path.join(__dirname, '..', 'words.txt');
+var words = fs.readFileSync(filePath, 'utf-8');
+var splitWords = function(text) {
+  return text.split(/\n/).reduce(function(acc, val) {
+    var arr = val.split(/\t/);
+    acc[arr[0]] = arr.slice(1).join(" ");
+    return acc;
+  }, {});
+}
 
 var handleHome = function(request, response) {
   var filePath = path.join(__dirname, '..', 'public', 'index.html');
@@ -17,7 +25,7 @@ var handleHome = function(request, response) {
 }
 
 var handlePublic = function(request, response, url) {
-  var extention = url.split('.')[1];
+  var extention = url.split('/')[1];
   var extentionTypes = {
     html: 'text/html',
     js: 'application/javascript',
@@ -56,14 +64,14 @@ var handlePublic = function(request, response, url) {
 // return newArrWords;
 // }
 var handlerSearch = function(request, response, url) {
-  console.log(words);
-var result =  words.filter(function(el){
-  return  el[0] == "a";
+  console.log(splitWords);
+var result =  splitWords.filter(function(el) {
+  return el[0] == "a";
 });
 console.log(result);
 }
 module.exports = {
   handleHome,
   handlePublic,
-  handlePublic
+  handlerSearch
 }
