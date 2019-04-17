@@ -6,7 +6,7 @@ var wordsList = path.readFile(__dirname, '..', 'words.txt')
 var box = document.getElementById('box');
 box.addEventListener("Keyboard", function(event){
   event.preventDefault();
-  
+
   fetch('/search')
   .then(function(response) {
     return response.json();

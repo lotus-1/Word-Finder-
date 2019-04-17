@@ -1,11 +1,11 @@
 body {
   text-align: center;
-  background-image: url('https://www.desktop-background.com/download/360x640/2012/12/13/498377_disney-wallpapers-backgrounds-with-quality-hd_2560x1440_h.jpg');
+  background-image: url('http://fog-wlprs.pw/images/700/DSC100776314.jpg');
   background-repeat: no-repeat;
   background-attachment: : fixed;
-  background-size: cover;
+  background-size: 100%;
   margin: 0%;
-  background-position: 50% 50%:
+  background-position: 5% 5%:
 }
 
 .img {
@@ -14,14 +14,14 @@ body {
 
 .h1 {
   font-size: 50px;
-  color: #003366;
+  color: #ffcc00;
 }
 
 .box {
   border-radius: 20%;
-  border-color: #000033;
+  border-color: #ffcc00;
   border-width: 5px;
-  width: 700px;
+  width: 550px;
   height: 50px;
   font-size: 30px;
 
