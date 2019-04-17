@@ -1,5 +1,5 @@
 var test = require('tape');
-var pureFunction = require('./main');
+var pureFunction = require('./router');
 
 test('Testing Tape', function(t) {
   t.equal(1, 1, 'Tape is working');
