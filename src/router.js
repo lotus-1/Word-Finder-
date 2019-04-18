@@ -1,4 +1,6 @@
 // This is a function for testing
+const handler = require('./handlers');
+
 var pureFunction = function (x) {
   if (typeof x === 'string') {
     return x;
