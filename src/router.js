@@ -27,4 +27,7 @@ const router = (request, response) => {
 };
 
 
-module.exports = pureFunction;
+module.exports = {
+  pureFunction,
+  router
+};

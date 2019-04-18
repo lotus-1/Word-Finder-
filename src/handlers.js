@@ -1,14 +1,16 @@
 var fs = require('fs');
 var path = require('path');
-var filePath = path.join(__dirname, '..', 'words.txt');
-var words = fs.readFileSync(filePath, 'utf-8');
-var splitWords = function(text) {
-  return text.split(/\n/).reduce(function(acc, val) {
-    var arr = val.split(/\t/);
-    acc[arr[0]] = arr.slice(1).join(" ");
-    return acc;
-  }, {});
-}
+// var filePath = path.join(__dirname, '..', 'words.txt');
+// var words = fs.readFileSync(filePath, 'utf-8');
+// var splitWords = function(text) {
+//   return text.split(/\n/).reduce(function(acc, val) {
+//     var arr = val.split(/\t/);
+//     acc[arr[0]] = arr.slice(1).join(" ");
+//     return acc;
+//   }, {});
+// }
+var words = fs.readFileSync(path.join(__dirname, '..', 'words.txt'), 'utf-8').split(/\n/);
+
 
 
 var handleHome = function(request, response) {
@@ -64,12 +66,18 @@ var handlePublic = function(request, response, url) {
 // })
 // return newArrWords;
 // }
-var handlerSearch = function(request, response, url) {
-  console.log(splitWords);
-var result =  splitWords.filter(function(el) {
-  return el[0] == "a";
-});
-console.log(result);
+
+// var handlerSearch = function(request, response, url) {
+//   console.log(splitWords);
+// var result =  splitWords.filter(function(el) {
+//   return el[0] == "a";
+// });
+// console.log(result);
+// }
+const handlerSearch = (request, response, url) => {
+  console.log(language);
+  const result = language.filter(el => el[0] === 'A');
+  console.log(result);
 }
 module.exports = {
   handleHome,
