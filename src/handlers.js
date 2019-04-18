@@ -10,6 +10,7 @@ var splitWords = function(text) {
   }, {});
 }
 
+
 var handleHome = function(request, response) {
   var filePath = path.join(__dirname, '..', 'public', 'index.html');
   fs.readFile(filePath, function(error, file) {
