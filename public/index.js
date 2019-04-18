@@ -13,6 +13,8 @@ box.addEventListener("Keyboard", function(event){
   })
   .then(function(data) {
 
-
+  });
+  .catch(function(error) {
+    console.log('Request failed', error);
   });
 }
