@@ -74,10 +74,10 @@ var handlePublic = function(request, response, url) {
 // });
 // console.log(result);
 // }
-const handlerSearch = (request, response, url) => {
-  console.log(language);
-  const result = language.filter(el => el[0] === 'A');
-  console.log(result);
+var handlerSearch = function(request, response, url){
+  console.log(words);
+  return words.filter(el => el[0] === 'A');
+
 }
 module.exports = {
   handleHome,
